@@ -1,15 +1,35 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
+
 namespace cSharpLerner
 {
     class Program
     {
         static void Main(string[] args)
         {
-
+            int a = 1;
+            int b = 2;
+            Swap(ref a,ref b);
         }
 
+        static void Addnumbers(List<int> numbers)
+        {
+            numbers.Add(1);
+            numbers.Add(2);
+            numbers.Add(3);
+        }
 
+        static void Swap(ref int a ,ref int b)
+        {
+            Console.WriteLine($"Originala{a},Original B = {b}");
+            int tmp;
+            tmp = a;
+            a = b;
+            b = tmp;
+            Console.WriteLine($"Swapped A = {a}, Swapped B= {b}");
+
+        }
 
 
         static void HomeWorkRomenNumbers()

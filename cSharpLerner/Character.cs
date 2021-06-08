@@ -6,7 +6,8 @@ using System.Threading.Channels;
 namespace cSharpLerner
 {
    public class Character
-    {
+   {
+       private static int Speed = 10;
         private int health=100;
        public void Hit(int damage)
         {
@@ -16,7 +17,18 @@ namespace cSharpLerner
             }
             Health -= damage;
         }
-        public int Health { get; private set; }
 
+       public int Health { get; private set; } = 100;
+
+
+       public void PrintSpeed()
+        {
+            Console.WriteLine($"Speed={Speed}");
+        }
+
+        public void IncreseSpeed()
+        {
+            Speed += 10;
+        }
     }
 }

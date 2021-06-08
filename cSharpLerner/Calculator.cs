@@ -3,7 +3,7 @@ using System.Threading;
 
 namespace cSharpLerner
 {
-    public class Calculator
+    public static class Calculator
     {
         public static double Avarage(int[] numbers)
         {
@@ -45,11 +45,21 @@ namespace cSharpLerner
 
             return 0.5*b*h;
         }        
-        public static double CalcTriangleSquare(double ab, double ac, int angle)
+        public static double CalcTriangleSquare(double ab, double ac, int angle, bool isBoolRadians = false)
         {
+            if (isBoolRadians)
+            {
+                return 0.5 * ab * ac * Math.Sin(angle);
+            }
             double rads = angle * Math.PI / 180;
             return 0.5*ab*ac*Math.Sin(rads);
-        }
+        }    
+        // public static double CalcTriangleSquare(double ab, double ac, int angle)
+        // {
+        //
+        //     double rads = angle * Math.PI / 180;
+        //     return 0.5*ab*ac*Math.Sin(rads);
+        // }
 
 
     }
