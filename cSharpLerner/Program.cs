@@ -6,12 +6,11 @@ namespace cSharpLerner
     {
         static void Main(string[] args)
         {
-            while (true)
-            {
-HomeWorkRomenNumbers();
-            }
-            
+
         }
+
+
+
 
         static void HomeWorkRomenNumbers()
         {
