@@ -3,7 +3,7 @@ using System.Threading;
 
 namespace cSharpLerner
 {
-    public class Calculator
+    public static class Calculator
     {
         public static double Avarage(int[] numbers)
         {

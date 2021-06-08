@@ -6,6 +6,13 @@ namespace cSharpLerner
     {
         static void Main(string[] args)
         {
+            Character char1 = new Character();
+            var char2 = new Character();
+            char1.PrintSpeed();
+            char2.IncreseSpeed();
+            char1.PrintSpeed();
+
+
 
         }
 
