@@ -7,26 +7,35 @@ namespace cSharpLerner
 {
    public class Character
    {
-       private static int Speed = 10;
-        private int health=100;
-       public void Hit(int damage)
+       private readonly int Speed = 10;
+        public int Health { get;private set;} = 100;
+        public string Race{ get; private set; }
+        public int Armor { get; private set; }
+        public void Hit(int damage)
         {
-            if (damage > health)
+            if (damage > Health)
             {
-                damage = health;
+                damage = Health;
             }
-            Health -= damage;
+            Health = Health+ Armor - damage;
         }
-        public int Health { get; private set; }
 
         public void PrintSpeed()
         {
             Console.WriteLine($"Speed={Speed}");
         }
 
-        public void IncreseSpeed()
+
+        public Character(string race, int armor = 30)//Optional Parameter
         {
-            Speed += 10;
+            this.Race = race;
+            this.Armor = armor;
+        }
+        public Character(string race, int speed, int armor = 30)//Optional Parameter
+        {
+            this.Race = race;
+            this.Armor = armor;
+            this.Speed = speed;
         }
     }
 }

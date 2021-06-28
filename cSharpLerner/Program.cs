@@ -6,18 +6,14 @@ namespace cSharpLerner
     {
         static void Main(string[] args)
         {
-            Character char1 = new Character();
-            var char2 = new Character();
-            char1.PrintSpeed();
-            char2.IncreseSpeed();
-            char1.PrintSpeed();
-
-
-
+            List<object> list = new List<object>() { 1, 2, 3 };
+            IBaseCollection collection = new BaseList(4);
+            collection.Add(1);
+            collection.AddRange(list);
         }
+        
 
-
-
+        
 
         static void HomeWorkRomenNumbers()
         {
