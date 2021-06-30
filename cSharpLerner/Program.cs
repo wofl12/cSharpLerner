@@ -6,10 +6,20 @@ namespace cSharpLerner
     {
         static void Main(string[] args)
         {
-            List<object> list = new List<object>() { 1, 2, 3 };
-            IBaseCollection collection = new BaseList(4);
-            collection.Add(1);
-            collection.AddRange(list);
+            MyStack<int> ms = new MyStack<int>();
+            ms.push(1);
+            ms.push(2);
+            ms.push(3);
+
+            Console.WriteLine(ms.Peek());
+
+            ms.Pop();
+            Console.WriteLine(ms.Peek());
+
+            ms.push(3);
+            ms.push(4);
+            ms.push(5);
+            Console.WriteLine(ms.Peek());
         }
         
 
