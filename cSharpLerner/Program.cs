@@ -8,17 +8,12 @@ namespace cSharpLerner
     {
         static void Main(string[] args)
         {
-            int a = 1;
-            int b = 2;
-            Swap(ref a,ref b);
+            List<object> list = new List<object>() { 1, 2, 3 };
+            IBaseCollection collection = new BaseList(4);
+            collection.Add(1);
+            collection.AddRange(list);
         }
-
-        static void Addnumbers(List<int> numbers)
-        {
-            numbers.Add(1);
-            numbers.Add(2);
-            numbers.Add(3);
-        }
+        
 
         static void Swap(ref int a ,ref int b)
         {
@@ -29,8 +24,7 @@ namespace cSharpLerner
             b = tmp;
             Console.WriteLine($"Swapped A = {a}, Swapped B= {b}");
 
-        }
-
+        
 
         static void HomeWorkRomenNumbers()
         {
