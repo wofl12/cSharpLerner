@@ -24,13 +24,13 @@ namespace cSharpLerner
     {
         public ModelXTerminal(string id) : base(id)
         {
-            
+
         }
         public override void Connect()
         {
             base.Connect();
             Console.WriteLine("Additional acction for Model X");
-        } 
+        }
     }
     public class ModelYTerminal : BankTerminal
     {

@@ -11,7 +11,7 @@ namespace cSharpLerner
 
             int a = 1;
             int b = 2;
-            Swap(ref a,ref b);
+            Swap(ref a, ref b);
         }
 
         static void Addnumbers(List<int> numbers)
@@ -26,10 +26,10 @@ namespace cSharpLerner
             collection.AddRange(list);
 >>>>>>> 8be2e5397b291e94c00cb663f8c425a3cff9d9eb
         }
-        
+
 
 <<<<<<< HEAD
-        static void Swap(ref int a ,ref int b)
+        static void Swap(ref int a, ref int b)
         {
             Console.WriteLine($"Originala{a},Original B = {b}");
             int tmp;
@@ -53,35 +53,36 @@ namespace cSharpLerner
             int summe = 0;
             for (int i = 0; i < eingabe.Length; i++)
             {
-                if (eingabe[i] == 'i'  )
-                {   for (int j = 4; j > 0; j--) 
+                if (eingabe[i] == 'i')
+                {
+                    for (int j = 4; j > 0; j--)
                     {
-                         {
+                        {
                             if (i + j < eingabe.Length)
                             {
                                 if (eingabe[i + j] == 'i')
                                 {
-                                    summe = summe + j+1;
+                                    summe = summe + j + 1;
                                     Console.WriteLine($"i={i}  j={j} ");
                                     i = j + i;
                                     break;
                                 }
                                 else if (eingabe[i + j] == 'v')
                                 {
-                                    summe = summe - 1 ;
+                                    summe = summe - 1;
                                     Console.WriteLine($"i={i}  j={j} ");
                                     break;
                                 }
                                 else summe = summe + 1;
                             }
                             else continue;
-                            
 
-                       
+
+
                         }
-                        
+
                     }
-summe = summe + 1;
+                    summe = summe + 1;
                 }
                 if (eingabe[i] == 'v')
                 {
@@ -145,12 +146,12 @@ summe = summe + 1;
                 }
                 if (eingabe[i] == 'm')
                 {
-                     summe = summe + 1000;
+                    summe = summe + 1000;
                 }
             }
-        
-        
-            Console.WriteLine("Summe = "+summe+ "  " + eingabe.Length);
+
+
+            Console.WriteLine("Summe = " + summe + "  " + eingabe.Length);
 
 
 
@@ -161,11 +162,11 @@ summe = summe + 1;
             string password = "qwerty";
             string UserLogin;
             string UserPass;
-            int tryes=0;
+            int tryes = 0;
             Console.WriteLine("You have a 3 tryes");
             do
             {
-                Console.WriteLine("Try nr: "+ (tryes+1));
+                Console.WriteLine("Try nr: " + (tryes + 1));
                 Console.WriteLine("Please give me a login");
                 UserLogin = Console.ReadLine();
                 UserLogin = UserLogin.ToLower();
@@ -173,7 +174,7 @@ summe = summe + 1;
                 UserPass = Console.ReadLine();
                 tryes++;
             }
-            while (LoginAndPassTrue(UserLogin, UserPass) == false && tryes != 3) ;
+            while (LoginAndPassTrue(UserLogin, UserPass) == false && tryes != 3);
             if (LoginAndPassTrue(UserLogin, UserPass) == true)
             {
                 Console.WriteLine("Login succes");
@@ -190,58 +191,59 @@ summe = summe + 1;
         {
             Console.WriteLine("Give me an factorial number : ");
             int number = int.Parse(Console.ReadLine());
-            long summe=1;
+            long summe = 1;
             if (number == 0) Console.WriteLine("Summe =1");
-            for (int i = number; i >0; i--)
+            for (int i = number; i > 0; i--)
             {
                 summe *= i;
-                Console.WriteLine($"i= {i} * summe ="+summe);
+                Console.WriteLine($"i= {i} * summe =" + summe);
             }
 
         }
         static void HomeWork10Numbers()
-        { int i = -1;
-            int[] numbers = new int[10]; 
+        {
+            int i = -1;
+            int[] numbers = new int[10];
             Console.WriteLine("Please Give me a 10 numbers");
             do
             {
-            i++;
-             numbers[i] = int.Parse(Console.ReadLine());
+                i++;
+                numbers[i] = int.Parse(Console.ReadLine());
 
-            } while (i != 9 &&numbers[i]!=0);
-            double summe=0;
+            } while (i != 9 && numbers[i] != 0);
+            double summe = 0;
             if (i == 9) i = 10;
             foreach (var k in numbers)
             {
                 summe = summe + (double)k;
             }
-            Console.WriteLine("Arethmetic avarage ="+summe/(double)i);
+            Console.WriteLine("Arethmetic avarage =" + summe / (double)i);
         }
-            static void HomeWorkFibonacci()
+        static void HomeWorkFibonacci()
         {
             Console.WriteLine("How much numbers?");
             int numbers = int.Parse(Console.ReadLine());
             int[] zahlen = new int[numbers];
             zahlen[0] = 1;
             zahlen[1] = 1;
-       
+
 
             for (int i = 0; i < numbers; i++)
             {
                 if (i < 2)
                 {
-                    Console.WriteLine($"{i+1}= {zahlen[i]}");
+                    Console.WriteLine($"{i + 1}= {zahlen[i]}");
                 }
                 if (i >= 2)
                 {
-                zahlen[i] = zahlen[i - 1] + zahlen[i - 2];
-                Console.WriteLine($"{i+1}= {zahlen[i]}");
+                    zahlen[i] = zahlen[i - 1] + zahlen[i - 2];
+                    Console.WriteLine($"{i + 1}= {zahlen[i]}");
                 }
 
             }
-        
+
         }
-            static void HomeWorks123(string[] args)
+        static void HomeWorks123(string[] args)
         {
             Console.WriteLine("Give me a 3 numbers ");
             double a = double.Parse(Console.ReadLine());

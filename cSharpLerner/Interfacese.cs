@@ -11,7 +11,7 @@ namespace cSharpLerner
     }
 
     public static class BaseCollestionExt
-        {
+    {
         public static void AddRange(this IBaseCollection collection, IEnumerable<object> objects)
         {
             foreach (var item in objects)
@@ -19,9 +19,9 @@ namespace cSharpLerner
                 collection.Add(item);
             }
         }
-        }
+    }
 
-public class BaseList : IBaseCollection
+    public class BaseList : IBaseCollection
     {
         private object[] items;
 

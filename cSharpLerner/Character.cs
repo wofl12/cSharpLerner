@@ -5,11 +5,11 @@ using System.Threading.Channels;
 
 namespace cSharpLerner
 {
-   public class Character
-   {
-       private readonly int Speed = 10;
-        public int Health { get;private set;} = 100;
-        public string Race{ get; private set; }
+    public class Character
+    {
+        private readonly int Speed = 10;
+        public int Health { get; private set; } = 100;
+        public string Race { get; private set; }
         public int Armor { get; private set; }
         public void Hit(int damage)
         {
@@ -17,7 +17,7 @@ namespace cSharpLerner
             {
                 damage = Health;
             }
-            Health = Health+ Armor - damage;
+            Health = Health + Armor - damage;
         }
 
         public void PrintSpeed()
