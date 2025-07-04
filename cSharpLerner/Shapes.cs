@@ -55,7 +55,7 @@ namespace cSharpLerner
         private readonly double width;
         private readonly double height;
 
-        public Ractangle(double width , double height)
+        public Ractangle(double width, double height)
         {
             this.width = width;
             this.height = height;

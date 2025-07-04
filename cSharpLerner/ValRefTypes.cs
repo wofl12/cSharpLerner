@@ -1,7 +1,7 @@
 ﻿using System;
 
 namespace cSharpLerner
-{   
+{
     public struct EvilStruct
     {
         public int x;
@@ -18,7 +18,8 @@ namespace cSharpLerner
         {
             Console.WriteLine($"x {x}, y{y}");
         }
-    }    public class PointRef
+    }
+    public class PointRef
     {
         public int x;
         public int y;
